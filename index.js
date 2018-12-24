@@ -4,14 +4,14 @@ const upimg = require('upimg')
 const servers = ['alibaba', 'jd', 'netease', 'qihoo', 'smms', 'sogou', 'xitu'];
 
 program
-  .version('0.1.0')
+  .version('1.1.0')
   .usage('[-s server] -f <file>')
-  .option('-s, --server [server]', "one of ['alibaba', 'jd', 'netease', 'qihoo', 'smms', 'sogou', 'xitu'], default smms")
+  .option('-s, --server [server]', "one of ['alibaba', 'jd', 'netease', 'qihoo', 'smms', 'sogou', 'xitu'], default jd")
   .option('-f, --file [file]', "the image you want to upload")
-  .version('0.0.1', '-v, --version')
+  .version('1.1.0', '-v, --version')
   .parse(process.argv);
 
-const server = program.server ? program.server : 'smms';
+const server = program.server ? program.server : 'jd';
 
 if (!program.file) {
   program.outputHelp();
